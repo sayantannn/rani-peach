@@ -3,6 +3,7 @@ import detectron2
 from detectron2.utils.logger import setup_logger
 setup_logger()
 import main
+from main import roboflow_link
 
 # import some common libraries
 import numpy as np
@@ -20,7 +21,7 @@ from detectron2.data.catalog import DatasetCatalog
 from detectron2.data.datasets import register_coco_instances
 
 #now the link from roboflow for the annotation files
-curl -L ,main.roboflow_link > roboflow.zip; unzip, roboflow.zip; rm ,roboflow.zip  #chance of a syntax problem
+curl -L ,roboflow_link > roboflow.zip; unzip, roboflow.zip; rm ,roboflow.zip  #chance of a syntax problem
 
 #making coco instances for the training, validation and testing of dataset
 def coco_int(traind,vald,testd):

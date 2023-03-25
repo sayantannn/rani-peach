@@ -5,32 +5,31 @@ from utility import visual
 import utility
 import inference
 
-#link for roboflow dataset
-roboflow_link = "https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP"  
+if __name__ == "__main__":
 
-traindm = "/content/train/_annotations.coco.json"
-valdm = "/content/valid/_annotations.coco.json"
-testdm = "/content/test/_annotations.coco.json"
+    #link for roboflow dataset
+    roboflow_link = "https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP"  
 
-coco_int(traindm, valdm, testdm)
-print("Visualization of training data:")
+    traindm = "/content/train/_annotations.coco.json"
+    valdm = "/content/valid/_annotations.coco.json"
+    testdm = "/content/test/_annotations.coco.json"
 
-utility.visual()
+    coco_int(traindm, valdm, testdm)
+    print("Visualization of training data:")
 
-#now the output directory and training will be done
+    utility.visual()
 
-trainerr()
+    #now the output directory and training will be done
 
-#test evaluation
-utility.evaluation()
-#inference with detectron2
-inference.inference()
- 
- #now the test result
-utility.testresult()
- 
-#train visualization
-utility.trainvilualize()
+    trainerr()
 
+    #test evaluation
+    utility.evaluation()
+    #inference with detectron2
+    inference.inference()
 
+     #now the test result
+    utility.testresult()
 
+    #train visualization
+    utility.trainvilualize()

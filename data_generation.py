@@ -2,7 +2,9 @@
 import detectron2
 from detectron2.utils.logger import setup_logger
 setup_logger()
-import request
+import os
+import requests
+import zipfile
 
 # import some common libraries
 import numpy as np

@@ -8,7 +8,7 @@ from detectron2.utils.visualizer import ColorMode
 import glob
 import config
 import os
-from train import trainer
+from train import trainerr
 import cv2
 
 

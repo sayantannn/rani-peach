@@ -10,7 +10,7 @@ if __name__ == "__main__":
     #link for roboflow dataset
     #roboflow_link = "https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP"  
 
-    coco_int(traindm, valdm, testdm)
+    coco_int()
     print("Visualization of training data:")
 
     utility.visual()

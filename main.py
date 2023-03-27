@@ -8,11 +8,7 @@ import inference
 if __name__ == "__main__":
 
     #link for roboflow dataset
-    roboflow_link = "https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP"  
-
-    traindm = "/content/train/_annotations.coco.json"
-    valdm = "/content/valid/_annotations.coco.json"
-    testdm = "/content/test/_annotations.coco.json"
+    #roboflow_link = "https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP"  
 
     coco_int(traindm, valdm, testdm)
     print("Visualization of training data:")

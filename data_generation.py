@@ -21,11 +21,21 @@ from detectron2.data.datasets import register_coco_instances
 
 #link for roboflow dataset
 #roboflow_link = (curl -L "https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP")  
-url="https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP"
-roboflow_link = requests.get(url)
+roboflow_link="https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP"
 
 #now the link from roboflow for the annotation files
-roboflow_link > roboflow.zip && unzip roboflow.zip && rm roboflow.zip  #chance of a syntax problem
+
+response = requests.get(roboflow_link)
+with open("roboflow.zip", "wb") as f:
+    f.write(response.content)
+
+# Extract the contents of the zip file
+with zipfile.ZipFile("roboflow.zip", "r") as zip_ref:
+    zip_ref.extractall()
+
+# Delete the zip file
+os.remove("roboflow.zip")
+#roboflow_link > roboflow.zip && unzip roboflow.zip && rm roboflow.zip  #chance of a syntax problem
 
 #making coco instances for the training, validation and testing of dataset
 def coco_int():

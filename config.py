@@ -1,6 +1,7 @@
 from detectron2.engine import DefaultTrainer
 from detectron2.evaluation import COCOEvaluator
 from detectron2.config import get_cfg
+from detectron2 import model_zoo
 import os
  
 #We are importing our own Trainer Module here to use the COCO validation evaluation during training. Otherwise no validation eval occurs.

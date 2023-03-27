@@ -23,8 +23,8 @@ from detectron2.data.datasets import register_coco_instances
 curl -L ,roboflow_link > roboflow.zip; unzip, roboflow.zip; rm ,roboflow.zip  #chance of a syntax problem
 
 #making coco instances for the training, validation and testing of dataset
-def coco_int(traind,vald,testd):
-    register_coco_instances("my_dataset_train", {}, traind , "/content/train")
-    register_coco_instances("my_dataset_val", {}, vald, "/content/valid")
-    register_coco_instances("my_dataset_test", {}, testd, "/content/test")
+def coco_int():
+    register_coco_instances("my_dataset_train", {}, "/content/train/_annotations.coco.json", "/content/train")
+    register_coco_instances("my_dataset_val", {}, "/content/valid/_annotations.coco.json", "/content/valid")
+    register_coco_instances("my_dataset_test", {}, "/content/test/_annotations.coco.json", "/content/test")
     return True

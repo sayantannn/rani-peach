@@ -20,7 +20,7 @@ if __name__ == "__main__":
     trainer=trainerr()
 
     #test evaluation
-    utility.evaluation()
+    evaluation(trainer)
     #inference with detectron2
     inference.inference()
 

@@ -31,4 +31,4 @@ def coco_int(traind,vald,testd):
     register_coco_instances("my_dataset_train", {}, traind , "/content/train")
     register_coco_instances("my_dataset_val", {}, vald, "/content/valid")
     register_coco_instances("my_dataset_test", {}, testd, "/content/test")
-    return Trues
+    return True

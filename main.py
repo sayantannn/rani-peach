@@ -1,6 +1,9 @@
 from train import trainerr
 import config
 from data_generation import coco_int
+from data_generation import traind
+from data_generation import vald
+from data_generation import testd
 from utility import visual
 import utility
 import inference
@@ -14,7 +17,7 @@ if __name__ == "__main__":
     #valdm = "/content/valid/_annotations.coco.json"
     #testdm = "/content/test/_annotations.coco.json"
 
-    coco_int(traindm, valdm, testdm)
+    coco_int(traind, vald, testd)
     print("Visualization of training data:")
 
     utility.visual()

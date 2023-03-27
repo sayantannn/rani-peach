@@ -7,7 +7,8 @@ setup_logger()
 import numpy as np
 import cv2
 import random
-from cv2 import cv2_imshow
+#from cv2 import cv2_imshow
+from google.colab.patches import cv2_imshow
 
 # import some common detectron2 utilities
 from detectron2.engine import DefaultPredictor

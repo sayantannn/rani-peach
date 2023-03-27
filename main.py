@@ -1,7 +1,7 @@
 from train import trainerr
 import config
 from data_generation import coco_int
-from utility import visual
+from utility import visual, evaluation
 import utility
 import inference
 
@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     #now the output directory and training will be done
 
-    trainerr()
+    trainer=trainerr()
 
     #test evaluation
     utility.evaluation()

@@ -2,6 +2,7 @@
 import detectron2
 from detectron2.utils.logger import setup_logger
 setup_logger()
+import request
 
 # import some common libraries
 import numpy as np
@@ -19,7 +20,9 @@ from detectron2.data.catalog import DatasetCatalog
 from detectron2.data.datasets import register_coco_instances
 
 #link for roboflow dataset
-roboflow_link = (curl -L "https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP")  
+#roboflow_link = (curl -L "https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP")  
+url="https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP"
+roboflow_link = requests.get(url)
 
 #now the link from roboflow for the annotation files
 roboflow_link > roboflow.zip; unzip roboflow.zip; rm roboflow.zip  #chance of a syntax problem

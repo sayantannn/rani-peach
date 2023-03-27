@@ -8,7 +8,7 @@ def trainerr():
     trainer.resume_or_load(resume=False)
     
     trainer.train()
-    return True
+    return trainer
     
 
 #here it starts the training

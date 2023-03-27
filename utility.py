@@ -28,7 +28,7 @@ def visual():
         cv2_imshow(vis.get_image()[:, :, ::-1])
 
 #now the evaluation of the test
-def evaluation():
+def evaluation(trainer):
     config.cfg.MODEL.WEIGHTS = os.path.join(config.cfg.OUTPUT_DIR, "model_final.pth")
     config.cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
     predictor = DefaultPredictor(config.cfg) #not found

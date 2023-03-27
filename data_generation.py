@@ -24,9 +24,6 @@ from detectron2.data.datasets import register_coco_instances
 curl -L ,roboflow_link > roboflow.zip; unzip, roboflow.zip; rm ,roboflow.zip  #chance of a syntax problem
 
 #making coco instances for the training, validation and testing of dataset
-traind = "/content/train/_annotations.coco.json"
-vald = "/content/valid/_annotations.coco.json"
-testd = "/content/test/_annotations.coco.json"
 def coco_int(traind,vald,testd):
     register_coco_instances("my_dataset_train", {}, traind , "/content/train")
     register_coco_instances("my_dataset_val", {}, vald, "/content/valid")

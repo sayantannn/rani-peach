@@ -8,8 +8,7 @@ from detectron2.utils.visualizer import ColorMode
 import glob
 import config
 import os
-from train import trainerr
-from train import train
+from train import trainer
 import cv2
 
 
@@ -35,7 +34,7 @@ def evaluation():
     predictor = DefaultPredictor(config.cfg) #not found
     evaluator = COCOEvaluator("my_dataset_test", config.cfg, False, output_dir="./output/")
     val_loader = build_detection_test_loader(config.cfg, "my_dataset_test")
-    inference_on_dataset(train.trainer.model, val_loader, evaluator)
+    inference_on_dataset(trainer.model, val_loader, evaluator)
 
 #test result
 

@@ -1,6 +1,7 @@
 import config
 from config import cfg
 from detectron2.engine import DefaultPredictor
+import os
 
 #inference with detectron2
 def inference():

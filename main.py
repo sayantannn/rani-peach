@@ -5,6 +5,7 @@ from utility import visual, evaluation
 import utility
 import inference
 import cv2
+from google.colab.patches import cv2_imshow
 
 if __name__ == "__main__":
 

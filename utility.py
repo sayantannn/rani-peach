@@ -31,11 +31,11 @@ def visual():
 
 #now the evaluation of the test
 def evaluation(trainer):
-    config.cfg.MODEL.WEIGHTS = os.path.join(config.cfg.OUTPUT_DIR, "model_final.pth")
-    config.cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
-    predictor = DefaultPredictor(config.cfg) #not found
-    evaluator = COCOEvaluator("my_dataset_test", config.cfg, False, output_dir="./output/")
-    val_loader = build_detection_test_loader(config.cfg, "my_dataset_test")
+    cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
+    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
+    predictor = DefaultPredictor(cfg) #not found
+    evaluator = COCOEvaluator("my_dataset_test", cfg, False, output_dir="./output/")
+    val_loader = build_detection_test_loader(cfg, "my_dataset_test")
     inference_on_dataset(trainer.model, val_loader, evaluator)
 
 #test result

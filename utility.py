@@ -41,7 +41,7 @@ def evaluation(trainer):
 
 def testresult():
     i=-1
-    for imageName in glob.glob('/content/rani-peach/rani-peach/test/*jpg'):
+    for imageName in glob.glob('/content/rani-peach/test/*jpg'):
         i=i+1
         x=random.randint(0, 1)
         # if i in [2,4,5]:

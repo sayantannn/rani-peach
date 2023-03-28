@@ -2,6 +2,7 @@ import data_generation
 from data_generation import coco_int
 import random
 from detectron2.utils.visualizer import Visualizer
+from detectron2.engine import DefaultPredictor
 from detectron2.data import DatasetCatalog, MetadataCatalog, build_detection_test_loader
 from detectron2.evaluation import COCOEvaluator, inference_on_dataset
 from detectron2.utils.visualizer import ColorMode

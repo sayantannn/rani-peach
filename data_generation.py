@@ -43,7 +43,7 @@ def robolink():
     #making coco instances for the training, validation and testing of dataset
     
 def coco_int():
-    register_coco_instances("my_dataset_train", {}, "/content/train/_annotations.coco.json", "/content/train")
-    register_coco_instances("my_dataset_val", {}, "/content/valid/_annotations.coco.json", "/content/valid")
-    register_coco_instances("my_dataset_test", {}, "/content/test/_annotations.coco.json", "/content/test")
+    register_coco_instances("my_dataset_train", {}, "/content/rani-peach/train/_annotations.coco.json", "/content/rani-peach/train")
+    register_coco_instances("my_dataset_val", {}, "/content/rani-peach/valid/_annotations.coco.json", "/content/rani-peach/valid")
+    register_coco_instances("my_dataset_test", {}, "/content/rani-peach/test/_annotations.coco.json", "/content/rani-peach/test")
     return True

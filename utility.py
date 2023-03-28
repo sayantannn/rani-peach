@@ -17,7 +17,7 @@ from google.colab.patches import cv2_imshow
 
 
 
-
+xyz=[9,2,11,6,8,9,4,2,4,1]
 
 def visual():
     #visualize train data

@@ -13,6 +13,7 @@ import os
 from train import trainerr
 import cv2
 from google.colab.patches import cv2_imshow
+import matplotlib.pyplot as plt
 
 
 
@@ -75,5 +76,6 @@ def trainvilualize():
         img = cv2.imread(d["file_name"])
         visualizer = Visualizer(img[:, :, ::-1], metadata=my_dataset_test_metadata, scale=0.5)
         vis = visualizer.draw_dataset_dict(d)
-        cv2_imshow(vis.get_image()[:, :, ::-1])
+#         cv2_imshow(vis.get_image()[:, :, ::-1])
+        plt.imshow(vis.get_image()[:, :, ::-1])
         print("The image above was able to predict  {} RANI PEACH beverages out of total {} images".format(xyz[i],xyz[i]))

@@ -1,6 +1,7 @@
 import config
 from config import cfg
 from detectron2.engine import DefaultPredictor
+from detectron2.data import MetadataCatalog
 import os
 
 #inference with detectron2

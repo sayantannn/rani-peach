@@ -43,6 +43,7 @@ def evaluation(trainer):
 
 def testresult():
     i=-1
+    predictor = DefaultPredictor(cfg)
     for imageName in glob.glob('/content/rani-peach/test/*jpg'):
         i=i+1
         x=random.randint(0, 1)

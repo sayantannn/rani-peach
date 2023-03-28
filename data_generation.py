@@ -41,7 +41,7 @@ os.remove("roboflow.zip")
 
 #making coco instances for the training, validation and testing of dataset
 def coco_int():
-    register_coco_instances("my_dataset_train", {}, "/content/train/_annotations.coco.json", "/content/train")
-    register_coco_instances("my_dataset_val", {}, "/content/valid/_annotations.coco.json", "/content/valid")
-    register_coco_instances("my_dataset_test", {}, "/content/test/_annotations.coco.json", "/content/test")
+    register_coco_instances("my_dataset_train", {}, "/train/_annotations.coco.json", "/train")
+    register_coco_instances("my_dataset_val", {}, "/valid/_annotations.coco.json", "/valid")
+    register_coco_instances("my_dataset_test", {}, "/test/_annotations.coco.json", "/test")
     return True

@@ -6,6 +6,7 @@ import utility
 import inference
 import cv2
 from google.colab.patches import cv2_imshow
+from detectron2.engine import DefaultPredictor
 
 if __name__ == "__main__":
 

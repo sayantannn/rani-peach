@@ -21,25 +21,27 @@ from detectron2.data import MetadataCatalog
 from detectron2.data.catalog import DatasetCatalog
 from detectron2.data.datasets import register_coco_instances
 
-#link for roboflow dataset
-#roboflow_link = (curl -L "https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP")  
-roboflow_link="https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP"
+def robolink():
+    #link for roboflow dataset
+    #roboflow_link = (curl -L "https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP")  
+    roboflow_link="https://app.roboflow.com/ds/KhjLZS7DRn?key=04wQwy2VHP"
 
-#now the link from roboflow for the annotation files
+    #now the link from roboflow for the annotation files
 
-response = requests.get(roboflow_link)
-with open("roboflow.zip", "wb") as f:
-    f.write(response.content)
+    response = requests.get(roboflow_link)
+    with open("roboflow.zip", "wb") as f:
+        f.write(response.content)
 
-# Extract the contents of the zip file
-with zipfile.ZipFile("roboflow.zip", "r") as zip_ref:
-    zip_ref.extractall()
+    # Extract the contents of the zip file
+    with zipfile.ZipFile("roboflow.zip", "r") as zip_ref:
+        zip_ref.extractall()
 
-# Delete the zip file
-os.remove("roboflow.zip")
-#roboflow_link > roboflow.zip && unzip roboflow.zip && rm roboflow.zip  #chance of a syntax problem
+    # Delete the zip file
+    os.remove("roboflow.zip")
+    #roboflow_link > roboflow.zip && unzip roboflow.zip && rm roboflow.zip  #chance of a syntax problem
 
-#making coco instances for the training, validation and testing of dataset
+    #making coco instances for the training, validation and testing of dataset
+    
 def coco_int():
     register_coco_instances("my_dataset_train", {}, "/content/train/_annotations.coco.json", "/content/train")
     register_coco_instances("my_dataset_val", {}, "/content/valid/_annotations.coco.json", "/content/valid")

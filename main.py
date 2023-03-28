@@ -4,6 +4,7 @@ from data_generation import coco_int,robolink
 from utility import visual, evaluation
 import utility
 import inference
+import cv2
 
 if __name__ == "__main__":
 

@@ -8,6 +8,7 @@ from detectron2.evaluation import COCOEvaluator, inference_on_dataset
 from detectron2.utils.visualizer import ColorMode
 import glob
 import config
+from config import cfg
 import os
 from train import trainerr
 import cv2

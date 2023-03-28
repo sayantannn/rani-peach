@@ -13,6 +13,8 @@ import os
 from train import trainerr
 import cv2
 from google.colab.patches import cv2_imshow
+from inference import test_metadata
+
 
 
 

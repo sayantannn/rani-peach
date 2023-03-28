@@ -13,7 +13,6 @@ import os
 from train import trainerr
 import cv2
 from google.colab.patches import cv2_imshow
-from inference import test_metadata
 
 
 
@@ -45,6 +44,7 @@ def evaluation(trainer):
 
 def testresult():
     i=-1
+    test_metadata = MetadataCatalog.get("my_dataset_test")
     predictor = DefaultPredictor(cfg)
     for imageName in glob.glob('/content/rani-peach/test/*jpg'):
         i=i+1

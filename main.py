@@ -13,7 +13,7 @@ if __name__ == "__main__":
     coco_int()
     print("Visualization of training data:")
 
-    utility.visual()
+    visual()
 
     #now the output directory and training will be done
 

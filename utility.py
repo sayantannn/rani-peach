@@ -30,7 +30,10 @@ def visual():
         img = cv2.imread(d["file_name"])
         visualizer = Visualizer(img[:, :, ::-1], metadata=my_dataset_train_metadata, scale=0.5)
         vis = visualizer.draw_dataset_dict(d)
-        cv2_imshow(vis.get_image()[:, :, ::-1])
+        #cv2_imshow(vis.get_image()[:, :, ::-1])
+        plt.imshow(vis.get_image()[:, :, ::-1])
+        plt.axis('off')  # Disable axis labels
+        plt.show()
 
 #now the evaluation of the test
 def evaluation(trainer):
@@ -58,7 +61,10 @@ def testresult():
                     metadata=test_metadata, 
                     scale=0.8)
         out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
-        cv2_imshow(out.get_image()[:, :, ::-1])
+        #cv2_imshow(out.get_image()[:, :, ::-1])
+        plt.imshow(vis.get_image()[:, :, ::-1])
+        plt.axis('off')  # Disable axis labels
+        plt.show()
         print("The image above was able to predict  {} RANI PEACH beverages out of total {} images".format(xyz[i],xyz[i]+x))
 
 
@@ -77,5 +83,8 @@ def trainvilualize():
         visualizer = Visualizer(img[:, :, ::-1], metadata=my_dataset_test_metadata, scale=0.5)
         vis = visualizer.draw_dataset_dict(d)
 #         cv2_imshow(vis.get_image()[:, :, ::-1])
+        #plt.imshow(vis.get_image()[:, :, ::-1])
         plt.imshow(vis.get_image()[:, :, ::-1])
+        plt.axis('off')  # Disable axis labels
+        plt.show()
         print("The image above was able to predict  {} RANI PEACH beverages out of total {} images".format(xyz[i],xyz[i]))
